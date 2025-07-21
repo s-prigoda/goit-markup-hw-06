@@ -257,7 +257,7 @@ button {
     visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-F.mobile-menu.is-open {
+.mobile-menu.is-open {
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
@@ -272,14 +272,8 @@ F.mobile-menu.is-open {
   height: 100%;
 }
 
-.mob-menu-close {
-  position: absolute;
-  top: 24px;
-  right: 24px;
-  width: 24px;
-  height: 24px;
-  border-radius: 50%;
-  background-color: #e7e9fc;
+.mobile-menu-container .mob-menu-close {
+  background-color: transparent;
 }
 
 .mob-menu-nav {
@@ -291,13 +285,17 @@ F.mobile-menu.is-open {
   font-size: 36px;
   line-height: 1.11;
   letter-spacing: 0.02em;
-  color: #404bbf;
+  color: #2e2f42;
 }
 
 .nav-list {
   display: flex;
   flex-direction: column;
   gap: 40px;
+}
+.mobile-menu-container .mob-soc-list {
+  gap: 40px;
+  margin-top: 48px;
 }
 
 @media screen and (min-width: 768px) {
@@ -932,7 +930,7 @@ F.mobile-menu.is-open {
   min-height: 623px;
   display: flex;
   flex-direction: column;
-  padding: 72px 24px 24px 24px;
+  padding: 72px 16px 24px 16px;
   position: absolute;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
     0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -1072,6 +1070,9 @@ F.mobile-menu.is-open {
   line-height: 1.17;
   letter-spacing: 0.04em;
   color: #8e8f99;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
 .check-form {
@@ -1086,6 +1087,7 @@ F.mobile-menu.is-open {
   align-items: center;
   justify-content: center;
   fill: transparent;
+  flex-shrink: 0;
 }
 
 .check-input:checked ~ .check-form {
@@ -1105,9 +1107,14 @@ F.mobile-menu.is-open {
   fill: #f4f4fd;
 }
 
+.check-form-list {
+}
+
 @media screen and (min-width: 768px) {
   .pop-up {
     width: 408px;
     min-height: 584px;
+    padding-left: 24px;
+    padding-right: 24px;
   }
 }
