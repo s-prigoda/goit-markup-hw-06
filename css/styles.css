@@ -98,6 +98,12 @@ button {
   display: none;
 }
 
+.address-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
 .logo {
   font-family: "Raleway", sans-serif;
   font-weight: 700;
@@ -180,6 +186,10 @@ button {
     display: block;
   }
 
+  .address-list {
+    gap: 12px;
+  }
+
   .header-list-item-link:hover,
   .header-list-item-link:focus {
     color: #404bbf;
@@ -204,11 +214,11 @@ button {
     color: #404bbf;
   }
 
-  .address-list {
+  /* .address-list {
     display: flex;
     flex-direction: column;
     gap: 12px;
-  }
+  } */
 
   .address-list-link {
     display: block;
@@ -293,9 +303,22 @@ button {
   flex-direction: column;
   gap: 40px;
 }
+
+.mob-menu-contact {
+  margin-bottom: 48px;
+}
+
+.addres-list-item {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  font-style: normal;
+  color: #2e2f42;
+}
+
 .mobile-menu-container .mob-soc-list {
   gap: 40px;
-  margin-top: 48px;
 }
 
 @media screen and (min-width: 768px) {
@@ -511,6 +534,7 @@ button {
   color: #434455;
   margin: 0;
   text-align: center;
+  margin-bottom: 8px;
 }
 
 .team-container {
@@ -522,7 +546,6 @@ button {
   justify-content: center;
   align-items: center;
   text-align: center;
-  margin-top: 8px;
   gap: 24px;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -598,7 +621,6 @@ button {
   justify-content: center;
 }
 .portfolio-list-item {
-  max-width: 288px;
   box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
     0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
 }
@@ -746,6 +768,10 @@ button {
   color: #f4f4fd;
 }
 
+.footer-container {
+  margin-bottom: 72px;
+}
+
 .footer-soc-text {
   font-weight: 500;
   font-size: 16px;
@@ -761,7 +787,6 @@ button {
   justify-content: center;
   align-items: center;
   gap: 16px;
-  margin-bottom: 72px;
 }
 
 .footer-soc-item {
@@ -820,8 +845,15 @@ button {
     gap: 24px;
   }
 
-  .footer-soc-text {
+  .footer-soc-text,
+  .footer-logo {
     text-align: left;
+  }
+
+  .footer-logo-container,
+  .footer-container {
+    margin-bottom: 0;
+    align-items: flex-start;
   }
 }
 
@@ -862,7 +894,7 @@ button {
   .logo-container {
     align-items: baseline;
     flex-wrap: nowrap;
-    max-width: 1128px;
+    max-width: 1158px;
     gap: 0;
   }
 
